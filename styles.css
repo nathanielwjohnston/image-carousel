@@ -71,7 +71,6 @@ body {
 }
 
 .carousel-slide {
-  border: 1px solid red;
   height: 30em;
   width: 55em;
   display: none;
@@ -79,4 +78,24 @@ body {
 
 .carousel-slide.showing {
   display: block;
+}
+
+.navigation-dot-container {
+  display: flex;
+  gap: 0.2em;
+  padding: 1em;
+  grid-column: 2 / 3;
+  place-self: center;
+}
+
+.navigation-dot {
+  width: 1em;
+  height: 1em;
+  border: 1px solid;
+  border-radius: 50%;
+  border-color: lightgrey;
+}
+
+.navigation-dot.selected {
+  background-color: lightgrey;
 }

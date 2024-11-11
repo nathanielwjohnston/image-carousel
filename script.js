@@ -5,6 +5,7 @@ function nextSlide () {
   if (nextSlide) {
     currentSlide.classList.remove("showing");
     nextSlide.classList.add("showing");
+    changeDotDisplay(currentSlide, nextSlide);
   }
 }
 
@@ -14,7 +15,22 @@ function previousSlide () {
   if (previousSlide) {
     currentSlide.classList.remove("showing");
     previousSlide.classList.add("showing");
+    changeDotDisplay(currentSlide, previousSlide);
   }
+}
+
+function changeDotDisplay (currentSlide, chosenSlide) {
+  const currentSlideNumber = currentSlide.dataset.slide;
+  const chosenSlideNumber = chosenSlide.dataset.slide;
+
+  const currentDot = 
+    document.querySelector(`.navigation-dot[data-slide="${currentSlideNumber}"]`);
+
+  const nextDot = 
+    document.querySelector(`.navigation-dot[data-slide="${chosenSlideNumber}"]`);
+
+  currentDot.classList.remove("selected");
+  nextDot.classList.add("selected");
 }
 
 const carousel = document.querySelector("#carousel");

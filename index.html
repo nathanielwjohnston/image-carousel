@@ -12,12 +12,17 @@
     <button class="previous-slide">&lt;</button>
     <div id="carousel-frame">
       <div class="slide-container">
-        <img class="carousel-slide" src="" alt="1">
-        <img class="carousel-slide" src="" alt="2">
-        <img class="carousel-slide showing" src="" alt="3">
+        <img class="carousel-slide" data-slide="1" src="" alt="1">
+        <img class="carousel-slide" data-slide="2" src="" alt="2">
+        <img class="carousel-slide showing" data-slide="3" src="" alt="3">
       </div>
     </div>
     <button class="next-slide">&#62;</button>
+    <div class="navigation-dot-container">
+      <div class="navigation-dot" data-slide="1"></div>
+      <div class="navigation-dot" data-slide="2"></div>
+      <div class="navigation-dot selected" data-slide="3"></div>
+    </div>
   </div>
 </body>
 </html>

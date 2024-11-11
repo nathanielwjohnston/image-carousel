@@ -16,3 +16,13 @@ function previousSlide () {
     previousSlide.classList.add("showing");
   }
 }
+
+const carousel = document.querySelector("#carousel");
+
+carousel.addEventListener("click", e => {
+  if (e.target === document.querySelector(".previous-slide")) {
+    previousSlide();
+  } else if (e.target === document.querySelector(".next-slide")) {
+    nextSlide();
+  }
+})

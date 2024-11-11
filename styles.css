@@ -23,3 +23,32 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
+/* ==========================================================================
+  General 
+  ========================================================================== */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#carousel-frame {
+  border: 1px solid;
+  height: 30em;
+  width: 55em;
+}
+
+.slide-container {
+  position: relative;
+}
+
+.carousel-slide {
+  border: 1px solid red;
+  height: 30em;
+  width: 55em;
+  display: none;
+}

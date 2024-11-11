@@ -52,3 +52,7 @@ body {
   width: 55em;
   display: none;
 }
+
+.carousel-slide.showing {
+  display: block;
+}

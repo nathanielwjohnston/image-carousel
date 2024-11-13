@@ -96,6 +96,11 @@ body {
   border-color: lightgrey;
 }
 
+.navigation-dot:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
 .navigation-dot.selected {
   background-color: lightgrey;
 }

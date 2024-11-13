@@ -33,6 +33,21 @@ function changeDotDisplay (currentSlide, chosenSlide) {
   nextDot.classList.add("selected");
 }
 
+function changeDot (chosenDot) {
+  const currentSlide = document.querySelector(".showing");
+
+  const chosenSlideNumber = chosenDot.dataset.slide;
+  const chosenSlide = 
+    document.querySelector(`.carousel-slide[data-slide="${chosenSlideNumber}"]`);
+
+  if (currentSlide !== chosenSlide) {
+    changeDotDisplay(currentSlide, chosenSlide);
+
+    currentSlide.classList.remove("showing");
+    chosenSlide.classList.add("showing");
+  }
+}
+
 const carousel = document.querySelector("#carousel");
 
 carousel.addEventListener("click", e => {
@@ -40,5 +55,7 @@ carousel.addEventListener("click", e => {
     previousSlide();
   } else if (e.target === document.querySelector(".next-slide")) {
     nextSlide();
+  } else if (e.target.classList.contains("navigation-dot")) {
+    changeDot(e.target);
   }
 })

@@ -71,4 +71,4 @@ carousel.addEventListener("click", e => {
   }
 })
 
-// TODO: Make slides advance every 5 seconds
+setInterval(nextSlide, 5000);

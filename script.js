@@ -61,14 +61,20 @@ function changeDot (chosenDot) {
 
 const carousel = document.querySelector("#carousel");
 
+let slideInterval = setInterval(nextSlide, 5000);
+
 carousel.addEventListener("click", e => {
   if (e.target === document.querySelector(".previous-slide")) {
     previousSlide();
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
   } else if (e.target === document.querySelector(".next-slide")) {
     nextSlide();
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
   } else if (e.target.classList.contains("navigation-dot")) {
     changeDot(e.target);
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
   }
 })
-
-setInterval(nextSlide, 5000);

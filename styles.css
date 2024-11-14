@@ -31,8 +31,10 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   height: 100vh;
   width: 100vw;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -103,4 +105,8 @@ body {
 
 .navigation-dot.selected {
   background-color: lightgrey;
+}
+
+#footer {
+  flex-shrink: 1;
 }
